@@ -1,17 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
-    <title>apollo-view</title>
+    <link rel="stylesheet" href="<%= BASE_URL %>index.css">
+    <title></title>
   </head>
   <body>
     <noscript>
-      <strong>We're sorry but apollo-view doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+      <strong>
+        很抱歉，如果没有 JavaScript 支持，鑫航OA系统将不能正常工作。请启用浏览器的 JavaScript 然后刷新页面。
+      </strong>
     </noscript>
-    <div id="app"></div>
-    <!-- built files will be auto injected -->
+    <div id="app">
+      <div class="x-home">
+        <div class="x-home__main">
+          <img class="x-home__loading" src="<%= BASE_URL %>loading-spin.svg" alt="loading">
+          <div class="x-home__title">
+            正在加载资源
+          </div>
+          <div class="x-home__sub-title">
+            初次加载资源可能需要较多时间 请耐心等待
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
