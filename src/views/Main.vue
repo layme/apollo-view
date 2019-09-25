@@ -10,11 +10,11 @@
         <x-header></x-header>
       </el-header>
       <el-main class="x-main">
-        <el-collapse-transition>
         <el-scrollbar wrap-class="scrollbar-wrapper" class="x-wrapper">
-          <router-view/>
+          <el-collapse-transition>
+            <router-view/>
+          </el-collapse-transition>
         </el-scrollbar>
-        </el-collapse-transition>
       </el-main>
     </el-container>
   </el-container>

@@ -46,23 +46,24 @@
         </div>
       </el-col>
     </el-row>
+    <el-row>
+      <div class="x-top">
+        <el-date-picker
+          v-model="yearParam"
+          type="year"
+          size="small"
+          format="yyyy"
+          :clearable="false"
+          :editable="false"
+          style="margin-left: 10px; width: 100px;"
+          placeholder="选择年">
+        </el-date-picker>
+        年各车型销售曲线
+        <ve-line :data="chartData" :settings="lineSettings"></ve-line>
+      </div>
+    </el-row>
     <el-row :gutter="20">
-      <el-col :xs="24" :sm="24" :lg="14">
-        <div class="x-top">
-          <el-date-picker
-            v-model="yearParam"
-            type="year"
-            size="small"
-            format="yyyy"
-            :clearable="false"
-            :editable="false"
-            style="margin-left: 10px; width: 100px;"
-            placeholder="选择年">
-          </el-date-picker> 年各车型销售曲线
-          <ve-line :data="chartData" :settings="lineSettings"></ve-line>
-        </div>
-      </el-col>
-      <el-col :xs="24" :sm="24" :lg="10">
+      <el-col :xs="24" :sm="24" :lg="12">
         <div class="x-top">
           <el-date-picker
             v-model="yearParam"
@@ -77,8 +78,6 @@
           <ve-pie :data="soldData" :settings="lineSettings"></ve-pie>
         </div>
       </el-col>
-    </el-row>
-    <el-row :gutter="20">
       <el-col :xs="24" :sm="24" :lg="12">
         <div class="x-top">
           <el-date-picker
@@ -94,8 +93,6 @@
           <ve-histogram :data="workerData" :extend="histogramExtend" :legend-visible="false"
                         :tooltip-visible="false"></ve-histogram>
         </div>
-      </el-col>
-      <el-col :xs="24" :sm="24" :lg="12">
       </el-col>
     </el-row>
   </div>
@@ -141,7 +138,11 @@ export default {
           { 'date': '2019-05', 'a': 55, 'b': 33, 'c': 3, 'd': 7 },
           { 'date': '2019-06', 'a': 32, 'b': 13, 'c': 5, 'd': 9 },
           { 'date': '2019-07', 'a': 11, 'b': 16, 'c': 3, 'd': 12 },
-          { 'date': '2019-08', 'a': 45, 'b': 24, 'c': 7, 'd': 22 }
+          { 'date': '2019-08', 'a': 45, 'b': 24, 'c': 7, 'd': 22 },
+          { 'date': '2019-09', 'a': null, 'b': null, 'c': null, 'd': null },
+          { 'date': '2019-10', 'a': null, 'b': null, 'c': null, 'd': null },
+          { 'date': '2019-11', 'a': null, 'b': null, 'c': null, 'd': null },
+          { 'date': '2019-12', 'a': null, 'b': null, 'c': null, 'd': null }
         ]
       },
       workerData: {
